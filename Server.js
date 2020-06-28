@@ -93,7 +93,7 @@ app.get('/list',(req,res)=>{
     } 
     //classic update
 
-    app.get('/classicupdate',(req,res)=>{
+    app.put('/classicupdate',(req,res)=>{
         let querry={_id:"5ef3114a343b734a58e2bb7e"}
         let update=
              {
@@ -121,7 +121,7 @@ app.get('/list',(req,res)=>{
  
 
     // new update
-    app.get("/newupdate", (req,res)=>{
+    app.put("/newupdate", (req,res)=>{
         let querry={name:"fares"}
         let update=
              {
@@ -137,7 +137,7 @@ app.get('/list',(req,res)=>{
 
     })
     // remove
-    app.get("/remove", (req,res)=>{
+    app.delete("/remove", (req,res)=>{
 
         Person.findOneAndRemove({_id:"5ef3172671784c710401a153"})
         
