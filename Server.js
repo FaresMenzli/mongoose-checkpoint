@@ -14,7 +14,7 @@ const newPerson = new Person ({
  //instance
         //add
     
-    app.get("/",(req,res)=>{
+    app.post("/",(req,res)=>{
      newPerson.save((err, data)=> {
         if (err) console.error(err)
         else { console.log(data) 
@@ -152,7 +152,7 @@ app.get('/list',(req,res)=>{
     })
     // remove many
 
- app.get("/removemany", (req,res)=>{
+ app.delete("/removemany", (req,res)=>{
      Person.remove({name:"person multiple1"})
      .then(doc=>{
         console.log(doc)
