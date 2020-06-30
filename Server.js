@@ -24,7 +24,7 @@ const newPerson = new Person ({
     })
 
     //add multiple
-    app.get("/addm",(req,res)=>{
+    app.post("/addm",(req,res)=>{
 
         Person.create([{
             name:"person multiple1",
